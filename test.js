@@ -1,28 +1,15 @@
-// program to check if the string is palindrome or not
-var ps = require('prompt-sync');
-var prompt = ps();
-
-
-function checkPalindrome(string) {
-
-  // find the length of a string
-  const len = string.length;
-
-  // loop through half of the string
-  for (let i = 0; i < len / 2; i++) {
-
-      // check if first and last string are same
-      if (string[i] !== string[len - 1 - i]) {
-          return 'It is not a palindrome';
-      }
+let n = 5;
+let string = "";
+for (let i = 1; i <= n; i++) {
+  for (let j = 0; j < i; j++) {
+    string += "*";
   }
-  return 'It is a palindrome';
+  string += "\n";
 }
-
-// take input
-const string = prompt('Enter a string: ');
-
-// call the function
-const value = checkPalindrome(string);
-
-console.log(value);
+for (let i = 1; i <= n - 1; i++) {
+  for (let j = 0; j < n - i; j++) {
+    string += "*";
+  }
+  string += "\n";
+}
+console.log(string);
